@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>farsight-wm</groupId>
+		<artifactId>farsight-wm</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../farsight-wm/pom.xml</relativePath>
+	</parent>
+	<artifactId>wm-parent</artifactId>
+	<version>10.5.0</version>
+	<packaging>pom</packaging>
+
+	<name>farsight-wm-parent</name>
+	<description>wm-parent for webMethods version 10.5</description>
+	<url>https://github.com/farsight-wm/wm-parent</url>
+
+	<issueManagement>
+		<url>https://github.com/farsight-wm/wm-parent/issues</url>
+		<system>GitHub.com</system>
+	</issueManagement>
+
+	<scm>
+		<url>https://github.com/farsight-wm/wm-parent</url>
+		<connection>scm:git:https://github.com/farsight-wm/wm-parent.git</connection>
+		<developerConnection>scm:git:https://github.com/farsight-wm/wm-parent.git</developerConnection>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>The MIT License (MIT)</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Cornelius Wicke</name>
+			<url>https://www.xing.com/profile/Cornelius_Wicke</url>
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- webMethods and provided library versions -->
+		<webMethods.version>10.5</webMethods.version>
+		<entrust-toolkit.version>8.0.33-1242</entrust-toolkit.version>
+		<commons-lang.version>3.7</commons-lang.version>
+		<log4j.version>2.11.2</log4j.version>
+		<javaxmail.version>1.4.4</javaxmail.version>
+		<axiom.version>1.2.13</axiom.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- provided libraries by webMethods -->
+			<dependency>
+				<groupId>com.softwareag.webmethods</groupId>
+				<artifactId>wm-isclient</artifactId>
+				<version>${webMethods.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.softwareag.webmethods</groupId>
+				<artifactId>wm-isserver</artifactId>
+				<version>${webMethods.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.entrust</groupId>
+				<artifactId>toolkit</artifactId>
+				<version>${entrust-toolkit.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>javax.mail-api</artifactId>
+				<version>${javaxmail.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.ws.commons.axiom</groupId>
+				<artifactId>axiom-api</artifactId>
+				<version>${axiom.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
