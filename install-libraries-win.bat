@@ -35,4 +35,3 @@ SET MVN_CMD_IMPORT=%MVN_CMD% install:install-file -Dpackaging=jar -DgeneratePom=
 %MVN_CMD_IMPORT% -DgroupId=com.softwareag.webmethods.wsstack -DartifactId=client-api 		-Dversion=%VER_SAG% -Dfile=%LIB_WSSTACK%\client-api-%VER_SAG%.0.0.jar
 %MVN_CMD_IMPORT% -DgroupId=com.softwareag.webmethods.wsstack -DartifactId=wsstack-commons 	-Dversion=%VER_SAG% -Dfile=%LIB_WSSTACK%\wsstack-commons-%VER_SAG%.0.0.jar
 
-pause
